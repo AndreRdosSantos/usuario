@@ -1,10 +1,7 @@
 package usuario.infraestructure.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -17,6 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity //identifica a Classe como uma Tabela (BD)
 @Table(name = "usuario") //nomeia a tabela, caso contrario o nome padrão é o nome da classe
+@Builder
 public class Usuario implements UserDetails { //implementa interface do spring security
 
 //UserDetails é um gerenciador de acesso
